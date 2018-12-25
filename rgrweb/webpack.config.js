@@ -14,13 +14,10 @@ module.exports = {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: ['style-loader','css-loader', 'sass-loader']
+          use: ['css-loader', 'sass-loader']
         })
       }
     ]
-  },
-  devServer:{
-      overlay : true
   },
   plugins: [
     new ExtractTextPlugin('style.css')
